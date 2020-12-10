@@ -5,9 +5,13 @@
 
 	<insert id="insertClientDetailInfo" parameterType="clientDetailInfo">
 		<![CDATA[
-		INSERT INTO clientDetailInfo(clientIdx, name)
+		INSERT INTO clientDetailInfo(clientIdx, name, nickname,gender,
+		job,age,salary,residence,religion,education,height,bodyShape,
+		drink,smoke)
 		VALUES(clientDetailInfo_SEQ.nextval,
-			#{name})
+			#{name},#{nickname},#{gender},#{job},
+			#{age},#{salary},#{residence},#{religion},#{education},#{height}
+			,#{bodyShape},#{drink},#{smoke})
 		]]>
 	</insert>
 	
